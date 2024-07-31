@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FetureModule } from './module/feture/feture.module';
 import { SharedModule } from './module/shared/shared.module';
+import { AdminModule } from './module/admin/admin.module';
+import { FeatureModule } from './module/feture/feture.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,8 +13,9 @@ import { SharedModule } from './module/shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FetureModule,
+    FeatureModule,
     SharedModule,
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

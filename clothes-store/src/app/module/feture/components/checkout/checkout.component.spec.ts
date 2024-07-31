@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeatureComponent } from './feture.component';
+import { CheckoutComponent } from './checkout.component';
 
-describe('FeatureComponent', () => {
-  let component: FeatureComponent;
-  let fixture: ComponentFixture<FeatureComponent>;
+describe('CheckoutComponent', () => {
+  let component: CheckoutComponent;
+  let fixture: ComponentFixture<CheckoutComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FeatureComponent]
+      declarations: [CheckoutComponent]
     });
-    fixture = TestBed.createComponent(FeatureComponent);
+    fixture = TestBed.createComponent(CheckoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

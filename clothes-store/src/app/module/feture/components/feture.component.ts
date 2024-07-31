@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './feture.component.html',
   styleUrls: ['./feture.component.scss']
 })
-export class FetureComponent {
+export class FeatureComponent {
 
 }
