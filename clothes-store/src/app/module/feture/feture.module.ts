@@ -1,27 +1,31 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './components/home/home.component';
-import { HomeProductCardComponent } from './components/home/home-product-card/home-product-card.component';
-import { MainCarouselComponent } from './components/home/main-carousel/main-carousel.component';
-import { ProductSliderComponent } from './components/home/product-slider/product-slider.component';
-import { ProductsComponent } from './components/products/products.component';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRadioModule } from '@angular/material/radio';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { CartComponent } from './components/cart/cart.component';
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { AddressFormComponent } from './components/checkout/address-form/address-form.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
-import { PaymentComponent } from './components/payment/payment.component';
-import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
-import { OrderComponent } from './components/order/order.component';
-import { OrderDetailsComponent } from './components/order-details/order-details.component';
 import { FeatureComponent } from './components/feture.component';
-
+import { HomeProductCardComponent } from './components/home/home-product-card/home-product-card.component';
+import { HomeComponent } from './components/home/home.component';
+import { MainCarouselComponent } from './components/home/main-carousel/main-carousel.component';
+import { ProductSliderComponent } from './components/home/product-slider/product-slider.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import { OrderComponent } from './components/order/order.component';
+import { PaymentSuccessComponent } from './components/payment-success/payment-success.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ProductReviewCardComponent } from './components/product-details/product-review-card/product-review-card.component';
+import { ProductsComponent } from './components/products/products.component';
 @NgModule({
   declarations: [
     FeatureComponent,
@@ -37,6 +41,9 @@ import { FeatureComponent } from './components/feture.component';
     PaymentSuccessComponent,
     OrderComponent,
     OrderDetailsComponent,
+    ProductReviewCardComponent,
+    AddressFormComponent,
+
   ],
   imports: [
     CommonModule,
@@ -46,8 +53,13 @@ import { FeatureComponent } from './components/feture.component';
     MatIconModule,
     MatCheckboxModule,
     MatRadioModule,
+    MatProgressBarModule,
+    MatInputModule,
+    MatFormFieldModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
 
   exports: [FeatureComponent, HomeComponent, ProductsComponent],
