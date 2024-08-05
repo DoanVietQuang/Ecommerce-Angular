@@ -21,4 +21,6 @@ export class NavbarContentComponent implements OnInit {
   navigateToProduct(levelOne: string, levelTwo: string, levelThree: string) {
     this.router.navigate([`lavelOne/${levelTwo}/${levelThree}`]);
   }
+
+  
 }

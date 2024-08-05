@@ -26,6 +26,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ProductReviewCardComponent } from './components/product-details/product-review-card/product-review-card.component';
 import { ProductsComponent } from './components/products/products.component';
+import { OrderCardComponent } from './components/order/order-card/order-card.component';
 @NgModule({
   declarations: [
     FeatureComponent,
@@ -43,6 +44,7 @@ import { ProductsComponent } from './components/products/products.component';
     OrderDetailsComponent,
     ProductReviewCardComponent,
     AddressFormComponent,
+    OrderCardComponent,
 
   ],
   imports: [
