@@ -53,13 +53,14 @@
         </svg>
       </button>
       <button
-        *ngIf="false"
+        (click)="handelOpenLoginModal()"
+        *ngIf="!userProfile"
         class="bg-[#ff4081] text-white px-4 py-2 rounded-md hover:bg-[#f50057] transition duration-300"
       >
         Login
       </button>
-      <div *ngIf="true" class="relative flex items-center space-x-3">
-        <span class="font-bold text-lg">Quang</span>
+      <div *ngIf="userProfile" class="relative flex items-center space-x-3">
+        <span class="font-bold text-lg">{{ userProfile.firstName }}</span>
         <button
           class="flex items-center space-x-1"
           [matMenuTriggerFor]="profileMenu"
@@ -70,9 +71,11 @@
           />
         </button>
         <mat-menu #profileMenu="matMenu">
-          <button (click)="navigateTo('account/orders')" mat-menu-item>Orders</button>
+          <button (click)="navigateTo('account/orders')" mat-menu-item>
+            Orders
+          </button>
           <button mat-menu-item>Profile</button>
-          <button mat-menu-item>Logout</button>
+          <button (click)="handleLogout()" mat-menu-item>Logout</button>
         </mat-menu>
       </div>
     </div>

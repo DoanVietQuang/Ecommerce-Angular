@@ -6,6 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './module/shared/shared.module';
 import { AdminModule } from './module/admin/admin.module';
 import { FeatureModule } from './module/feture/feture.module';
+import { StoreModule } from '@ngrx/store';
+import { AuthModule } from './module/auth/auth.module';
+import { authReducer } from './State/Auth/auth.reducer';
+import { HttpClientModule } from '@angular/common/http';
+import { userReducer } from './State/User/user.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +21,9 @@ import { FeatureModule } from './module/feture/feture.module';
     FeatureModule,
     SharedModule,
     AdminModule,
+    AuthModule,
+    StoreModule.forRoot({ auth: authReducer, user: userReducer }, {}),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
